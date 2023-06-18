@@ -2,7 +2,7 @@
     "name": "મારી ગીતાજી",
     "short_name": "ગીતાજી",
     "description": "Guidance for life's journey",
-    "start_url": "/",
+    "start_url": "/gitaji/",
     "display": "standalone",
     "background_color": "#c39b6b",
     "theme_color": "#c39b6b",
