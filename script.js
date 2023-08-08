@@ -1,5 +1,5 @@
 const xhr = new XMLHttpRequest();
-xhr.open('GET', 'db.json', true);
+xhr.open('GET', '/db.json', true);
 
 xhr.onload = function() {
   if (xhr.status === 200) {

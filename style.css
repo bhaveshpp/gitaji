@@ -54,6 +54,7 @@ ul {
     margin: 5px;
     font-size: small;
     list-style-type: none;
+    padding-inline-start: 0;
 }
 
 .nev {
