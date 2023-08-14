@@ -82,14 +82,16 @@ function closeNav() {
 
 function shareApp() {
     if (navigator.share) {
-    navigator.share({
-        title: 'શ્રી ગીતાજી',
-        text: 'Guidance for life journey!',
-        url: 'https://bhaveshpp.github.io/gitaji/',
-      })
-      .then(() => console.log('Successful share'))
-      .catch((error) => console.log('Error sharing', error));
-  } else {
-    console.log('Share not supported on this browser, do it the old way.');
-  }
+        navigator.share({
+            title: 'શ્રી ગીતાજી',
+            text: 'Guidance for life journey!',
+            url: 'https://bhaveshpp.github.io/gitaji/',
+        }).then(()=>console.log('Successful share')).catch((error)=>console.log('Error sharing', error));
+    } else {
+        console.log('Share not supported on this browser, do it the old way.');
+    }
+}
+
+function setFont(size) {
+    css.style.fontSize = size + 'rem';
 }

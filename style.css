@@ -17,6 +17,7 @@ body {
     margin: 0;
     background-color: aliceblue;
     font-size: 1.1rem;
+    user-select: none;
 }
 
 h1 {
@@ -138,6 +139,7 @@ section.footer {
     color: var(--theme-color);
     display: block;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .sidenav a:hover {
@@ -200,6 +202,7 @@ a {
 ul.fonts li {}
 
 .sidenav .copyright {
+  font-size: 12px;
     position: absolute;
     bottom: 10px;
     left: 8em;
