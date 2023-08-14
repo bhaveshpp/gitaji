@@ -1,60 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#c39b6b"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.json">
-    <title>મારા ગીતાજી</title>
-    <script>
-        if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('sw.js')
-            .then(function(registration) {
-              console.log('Service Worker registered with scope:', registration.scope);
-            })
-            .catch(function(error) {
-              console.error('Service Worker registration failed:', error);
-            });
-        }
-      </script>      
-</head>
-<body>
-    <div id="add-to-home-screen-popup" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background-color: #ffffff; border: 1px solid #dddddd; padding: 10px; border-radius: 4px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
-        <p>Add this app to your home screen for quick access.</p>
-        <button id="add-button" style="background-color: #4caf50; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Add</button>
-        <button id="cancel-button" style="background-color: #dddddd; color: black; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; margin-left: 10px;">Cancel</button>
-    </div>      
-    <header>
-        <div class="heading"><div class="title"><h1><span>મારા ગીતાજી</span></h1></div></div>
-        <div class="nev"><ul><li><a class="btn" href="#">અધ્યાય</a></li></ul></div>
-    </header>
-    <section class="main-content">
-        <div class="card"><div class="adhayay-title"><a href="adhayay.html"><h2>અર્જુનવિષાદ યોગ (કર્મયોગમાં).</h2></a></div></div>
-        <div class="card"><div class="adhayay-title"><a href="adhayay.html"><h2>સાંખ્ય યોગ (કર્મયોગમાં).</h2></a></div></div>
-        <div class="card"><div class="adhayay-title"><a href="adhayay.html"><h2>કર્મ યોગ (કર્મયોગમાં).</h2></a></div></div>
-        <div class="card"><div class="adhayay-title"><a href="adhayay.html"><h2>જ્ઞાનકર્મસંન્યાસ યોગ (કર્મયોગમાં).</h2></a></div></div>
-        <div class="card"><div class="adhayay-title"><a href="adhayay.html"><h2>કર્મસંન્યાસ યોગ (કર્મયોગમાં).</h2></a></div></div>
-        <div class="card"><div class="adhayay-title"><a href="adhayay.html"><h2>આત્મસંયમ યોગ (કર્મયોગમાં).</h2></a></div></div>
-        <div class="card"><div class="adhayay-title"><a href="adhayay.html"><h2>જ્ઞાનવિજ્ઞાન યોગ (ભક્તિયોગમાં).</h2></a></div></div>
-        <div class="card"><div class="adhayay-title"><a href="adhayay.html"><h2>અક્ષરબ્રહ્મ યોગ (ભક્તિયોગમાં).</h2></a></div></div>
-        <div class="card"><div class="adhayay-title"><a href="adhayay.html"><h2>રાજવિધ્યારાજગુહ્ય યોગ (ભક્તિયોગમાં).</h2></a></div></div>
-        <div class="card"><div class="adhayay-title"><a href="adhayay.html"><h2>વિભૂતિ યોગ (ભક્તિયોગમાં).</h2></a></div></div>
-        <div class="card"><div class="adhayay-title"><a href="adhayay.html"><h2>વિશ્વરૂપદર્શન યોગ (ભક્તિયોગમાં).</h2></a></div></div>
-        <div class="card"><div class="adhayay-title"><a href="adhayay.html"><h2>ભક્તિ યોગ (ભક્તિયોગમાં).</h2></a></div></div>
-        <div class="card"><div class="adhayay-title"><a href="adhayay.html"><h2>ક્ષેત્રક્ષેત્રજ્ઞ યોગ (જ્ઞાનયોગમાં).</h2></a></div></div>
-        <div class="card"><div class="adhayay-title"><a href="adhayay.html"><h2>ગુણત્રયવિભાગ યોગ (જ્ઞાનયોગમાં).</h2></a></div></div>
-        <div class="card"><div class="adhayay-title"><a href="adhayay.html"><h2>પુરુષોત્તમ યોગ (જ્ઞાનયોગમાં).</h2></a></div></div>
-        <div class="card"><div class="adhayay-title"><a href="adhayay.html"><h2>દેવાસુરસંપદ્વિભાગ યોગ (જ્ઞાનયોગમાં).</h2></a></div></div>
-        <div class="card"><div class="adhayay-title"><a href="adhayay.html"><h2>શ્રદ્ધાત્રયવિભાગ યોગ (જ્ઞાનયોગમાં).</h2></a></div></div>
-        <div class="card"><div class="adhayay-title"><a href="adhayay.html"><h2>મોક્ષસંન્યાસ યોગ (જ્ઞાનયોગમાં).</h2></a></div></div>
-    </section>
-    <section class="footer"><div><a href="https://bhaveshpp.github.io/">©bhaveshpp</a></div></section>
-</body>
-<script src="script.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#c39b6b"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+        <link rel="manifest" href="manifest.json">
+        <title>શ્રી ગીતાજી</title>
+        <script>
+            var css = document.querySelector(':root');
+        </script>
+        <script>
+            if ('serviceWorker'in navigator) {
+                navigator.serviceWorker.register('sw.js').then(function(registration) {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                }).catch(function(error) {
+                    console.error('Service Worker registration failed:', error);
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <div id="mySidenav" class="sidenav">
+            <img class="logo" src="./logo.png"/>
+            <ul>
+                <li><a href="#">Continue</a></li>
+                <li onclick="shareApp()">Share</li>
+                <li>
+                    <span>Font</span>
+                    <ul class="fonts">
+                        <li><span>Aa</span></li>
+                        <li><span>Aa</span></li>
+                        <li><span>Aa</span></li>
+                    </ul>
+                </li>
+                <li>
+                    <span>Theme</span>
+                    <div class="switch_box box_3">
+                        <div class="toggle_switch">
+                          <input type="checkbox" class="switch_3">
+                          <svg class="checkbox" xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" viewBox="0 0 168 80">
+                            <path class="outer-ring" d="M41.534 9h88.932c17.51 0 31.724 13.658 31.724 30.482 0 16.823-14.215 30.48-31.724 30.48H41.534c-17.51 0-31.724-13.657-31.724-30.48C9.81 22.658 24.025 9 41.534 9z" fill="none" stroke="#233043" stroke-width="3" stroke-linecap="square" stroke-miterlimit="3" />
+                            <path class="is_checked" d="M17 39.482c0-12.694 10.306-23 23-23s23 10.306 23 23-10.306 23-23 23-23-10.306-23-23z" />
+                            <path class="is_unchecked" d="M132.77 22.348c7.705 10.695 5.286 25.617-5.417 33.327-2.567 1.85-5.38 3.116-8.288 3.812 7.977 5.03 18.54 5.024 26.668-.83 10.695-7.706 13.122-22.634 5.418-33.33-5.855-8.127-15.88-11.474-25.04-9.23 2.538 1.582 4.806 3.676 6.66 6.25z" />
+                          </svg>
+                        </div>
+                      </div>
+                </li>
+            </ul>
+            <a href="https://bhaveshpp.github.io/" class="copyright">@bhaveshpp</a>
+        </div>
+        <div id="overlay" onclick="closeNav()"></div>
+        <div id="add-to-home-screen-popup">
+            <p>Do You want to install?</p>
+            <button id="add-button">yes</button>
+            <button id="cancel-button">no</button>
+        </div>
+        <header>
+            <div class="heading">
+                <div class="title">
+                    <span class="nav-trigger" onclick="openNav()">&#9776;</span>
+                    <h1>
+                        <span>શ્રી ગીતાજી</span>
+                    </h1>
+                </div>
+            </div>
+        </header>
+        <section class="main-content">
+            <div class="card">
+                <div class="adhayay-title">
+                    <a href="adhayay.html">
+                        <h2>૧. અર્જુનવિષાદ યોગ (કર્મયોગમાં).</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="adhayay-title">
+                    <a href="adhayay.html">
+                        <h2>૨. સાંખ્ય યોગ (કર્મયોગમાં).</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="adhayay-title">
+                    <a href="adhayay.html">
+                        <h2>૩. કર્મ યોગ (કર્મયોગમાં).</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="adhayay-title">
+                    <a href="adhayay.html">
+                        <h2>૪. જ્ઞાનકર્મસંન્યાસ યોગ (કર્મયોગમાં).</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="adhayay-title">
+                    <a href="adhayay.html">
+                        <h2>૫. કર્મસંન્યાસ યોગ (કર્મયોગમાં).</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="adhayay-title">
+                    <a href="adhayay.html">
+                        <h2>૬. આત્મસંયમ યોગ (કર્મયોગમાં).</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="adhayay-title">
+                    <a href="adhayay.html">
+                        <h2>૭. જ્ઞાનવિજ્ઞાન યોગ (ભક્તિયોગમાં).</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="adhayay-title">
+                    <a href="adhayay.html">
+                        <h2>૮. અક્ષરબ્રહ્મ યોગ (ભક્તિયોગમાં).</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="adhayay-title">
+                    <a href="adhayay.html">
+                        <h2>૯. રાજવિધ્યારાજગુહ્ય યોગ (ભક્તિયોગમાં).</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="adhayay-title">
+                    <a href="adhayay.html">
+                        <h2>૧૦. વિભૂતિ યોગ (ભક્તિયોગમાં).</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="adhayay-title">
+                    <a href="adhayay.html">
+                        <h2>૧૧. વિશ્વરૂપદર્શન યોગ (ભક્તિયોગમાં).</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="adhayay-title">
+                    <a href="adhayay.html">
+                        <h2>૧૨. ભક્તિ યોગ (ભક્તિયોગમાં).</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="adhayay-title">
+                    <a href="adhayay.html">
+                        <h2>૧૩. ક્ષેત્રક્ષેત્રજ્ઞ યોગ (જ્ઞાનયોગમાં).</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="adhayay-title">
+                    <a href="adhayay.html">
+                        <h2>૧૪. ગુણત્રયવિભાગ યોગ (જ્ઞાનયોગમાં).</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="adhayay-title">
+                    <a href="adhayay.html">
+                        <h2>૧૫. પુરુષોત્તમ યોગ (જ્ઞાનયોગમાં).</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="adhayay-title">
+                    <a href="adhayay.html">
+                        <h2>૧૬. દેવાસુરસંપદ્વિભાગ યોગ (જ્ઞાનયોગમાં).</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="adhayay-title">
+                    <a href="adhayay.html">
+                        <h2>૧૭. શ્રદ્ધાત્રયવિભાગ યોગ (જ્ઞાનયોગમાં).</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="adhayay-title">
+                    <a href="adhayay.html">
+                        <h2>૧૮. મોક્ષસંન્યાસ યોગ (જ્ઞાનયોગમાં).</h2>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="footer">
+            <div>
+                <a href="https://bhaveshpp.github.io/">©bhaveshpp</a>
+            </div>
+        </section>
+    </body>
+    <script src="script.js"></script>
 </html>
