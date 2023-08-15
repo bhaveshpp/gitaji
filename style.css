@@ -321,3 +321,6 @@ svg.checkbox .is_unchecked{
 }
 
 /* Switch 3 Specific Style End */
+
+
+.sidenav li:focus-visible {}

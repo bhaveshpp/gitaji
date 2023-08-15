@@ -95,3 +95,30 @@ function shareApp() {
 function setFont(size) {
     css.style.fontSize = size + 'rem';
 }
+
+function changeTheme(element) {
+    if(element.checked) {
+        sunRiseTheme();
+    }
+    else 
+    {
+        sunsetTheme();
+    }
+}
+
+function sunRiseTheme() {
+    css.style.setProperty('--theme-color', '#fff');
+    css.style.setProperty('--theme-color-second', '#303841');
+    css.style.setProperty('--theme-invert-color', '#000');
+    css.style.setProperty('--theme-menu-color', '#ab8446');
+    css.style.setProperty('--theme-bg-color', '#c39b6b');
+    css.style.setProperty('--theme-overlay-bg', 'rgba(0,0,0,0.5)');
+}
+function sunsetTheme() {
+    css.style.setProperty('--theme-color', '#303841');
+    css.style.setProperty('--theme-color-second', '#fff');
+    css.style.setProperty('--theme-bg-color', '#000');
+    css.style.setProperty('--theme-invert-color', '#c39b6b');
+    css.style.setProperty('--theme-menu-color', '#ab8446');
+    css.style.setProperty('--theme-overlay-bg', 'rgba(1,1,1,0.5)');
+}
