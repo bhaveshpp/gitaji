@@ -1,12 +1,28 @@
 :root {
-    --theme-color: #fff;
-    --theme-color-second: #303841;
-    --theme-invert-color: #000;
-    --theme-menu-color: #ab8446;
-    --theme-bg-color: #c39b6b;
     --theme-overlay-bg: rgba(0,0,0,0.5);
     --theme-font-size: 65.5%;
     --theme-border-radius: 10px;
+    /* Sun Theme color */
+    --sun-theme-color: #c39b6b;
+    --sun-theme-primary-color: #fff;
+    --sun-theme-invert-color: #303841;
+    --sun-theme-menu-color: #ffe6d1;
+    --sun-theme-menu-font-color: #c39b6b;
+    --sun-theme-walpaper-color: rgba(255, 255, 255, 0.5);
+    /* Moon Theme color */
+    --moon-theme-color: #303841;
+    --moon-theme-primary-color: #c39b6b;
+    --moon-theme-invert-color: #fff;
+    --moon-theme-menu-color: #303841;
+    --moon-theme-menu-font-color: #303841;
+    --moon-theme-walpaper-color: rgba(0, 0, 0, 0.5);
+    /* Default Theme color */
+    --theme-color: var(--sun-theme-color);
+    --theme-primary-color: var(--sun-theme-primary-color);
+    --theme-invert-color: var(--sun-theme-invert-color);
+    --theme-menu-color: var(--sun-theme-menu-color);
+    --theme-menu-font-color: var(--sun-theme-menu-font-color);
+    --theme-walpaper-color: var(--sun-theme-walpaper-color);
 }
 
 html {
@@ -15,7 +31,7 @@ html {
 
 body {
     margin: 0;
-    background-color: aliceblue;
+    background-color: antiquewhite;
     font-size: 1.1rem;
     user-select: none;
 }
@@ -24,12 +40,13 @@ h1 {
     margin: 10px;
     text-align: center;
     width: 100%;
-    color: #fff;
+    color: var(--theme-primary-color);
 }
 
 header {
-    background-color: var(--theme-bg-color);
+    background-color: var(--theme-color);
     border-radius: var(--theme-border-radius);
+    border-radius: 0 10px 10px 0;
     -webkit-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5);
     box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5);
@@ -51,23 +68,40 @@ a.btn {
 }
 
 section.main-content {
-    background-color: #a4c9ea;
+    background-color: var(--theme-walpaper-color);
     border-radius: var(--theme-border-radius);
     padding: 10px;
     margin: 5px;
+    border-radius: 0 10px 10px 0;
+    margin-left: 0;
 }
 
 .card {
-    background-color: #fff;
-    border-radius: var(--theme-border-radius);
-    margin: 10px;
-    padding: 1% 15% 1% 15%;
-    text-align: center;
+    display: flex;
+    background-color: transparent;
+    /* border-radius: var(--theme-border-radius); */
+    margin: 1px;
+    padding: 2% 7%;
+    /* text-align: center; */
     -webkit-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5);
-    box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5);
+    /* box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5); */
+    /* background: rgba( 255, 255, 255, 0.7 ); */
+    box-shadow: 0 8px 32px 0 rgba( 0,0,0, 0.1);
+    /* backdrop-filter: blur( 6px ); */
+    -webkit-backdrop-filter: blur( 6px );
+    /* border-radius: var(--theme-border-radius); */
+    /* margin: 10px; */
+    /* text-align: center; */
+    /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+    flex-direction: row;
+    align-items: baseline;
+    gap: 1em;
 }
-
+.adhyay-number {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
 .nev {
     text-align: center;
     padding: 5px;
@@ -77,6 +111,7 @@ section.main-content {
     background-color: var(--theme-bg-color);
     display: flex;
     vertical-align: middle;
+    align-items: center;
 }
 
 span.uvach {
@@ -102,31 +137,18 @@ section.footer {
     cursor: pointer;
 }
 
-#add-to-home-screen-popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #ffffff;
-    border: 1px solid #dddddd;
-    padding: 10px;
-    border-radius: var(--theme-border-radius);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
 .sidenav {
     height: 100%;
-    width: 0; 
+    width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
     background-color: var(--theme-menu-color);
+    color: var(--sun-theme-menu-font-color);
     overflow-x: hidden;
     transition: 0.5s;
-    /* padding-top: 60px; */
-    border-radius: 0 var(--theme-border-radius) var(--theme-border-radius) 0;
+    border-radius: 0 var( --theme-border-radius) var(--theme-border-radius) 0;
     -webkit-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5);
     box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5);
@@ -136,7 +158,6 @@ section.footer {
     padding: 8px 0;
     text-decoration: none;
     font-size: 2rem;
-    color: var(--theme-color);
     display: block;
     transition: 0.3s;
     cursor: pointer;
@@ -154,10 +175,22 @@ section.footer {
     margin-left: 50px;
 }
 
+#add-to-home-screen-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    padding: 10px;
+    border-radius: var(--theme-border-radius);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
 #add-button {
     background-color: #4caf50;
-    color: white;
+    color: #ffffff;
     border: none;
     padding: 8px 16px;
     border-radius: var(--theme-border-radius);
@@ -177,32 +210,34 @@ section.footer {
 .nav-trigger {
     font-size: 40px;
     cursor: pointer;
-    color: #fff;
+    color: var(--theme-primary-color);
     margin-left: 10px;
+    line-height: 1;
 }
-
 
 img.logo {
     margin-left: 3em;
 }
 
-.back{
+.back {
     font-size: 1.5rem;
     color: var(--theme-color-second);
     margin: 1em;
 }
 
 a {
-    color: var(--theme-color);
+    color: var(--theme-primary-color);
 }
+
 .fonts ul li {
     list-style: none;
 }
 
-ul.fonts li {}
+ul.fonts li {
+}
 
 .sidenav .copyright {
-  font-size: 12px;
+    font-size: 12px;
     position: absolute;
     bottom: 10px;
     left: 8em;
@@ -210,117 +245,122 @@ ul.fonts li {}
 }
 
 /* Switch 3 Specific Style Start */
-
-
-
-.toggle_switch{
-  width: 100px;
-  height: 45px;
-  position: relative;
+.toggle_switch {
+    width: 100px;
+    height: 45px;
+    position: relative;
 }
 
-input[type="checkbox"].switch_3{
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  outline: 0;
-  z-index: 1;
+input[type="checkbox"].switch_3 {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    outline: 0;
+    z-index: 1;
 }
 
-svg.checkbox .outer-ring{
-  stroke-dasharray: 375;
-  stroke-dashoffset: 375;
-  -webkit-animation: resetRing .35s ease-in-out forwards;
-          animation: resetRing .35s ease-in-out forwards;
+svg.checkbox .outer-ring {
+    stroke-dasharray: 375;
+    stroke-dashoffset: 375;
+    -webkit-animation: resetRing .35s ease-in-out forwards;
+    animation: resetRing .35s ease-in-out forwards;
 }
 
-input[type="checkbox"].switch_3:checked + svg.checkbox .outer-ring{
-  -webkit-animation: animateRing .35s ease-in-out forwards;
-          animation: animateRing .35s ease-in-out forwards;
+input[type="checkbox"].switch_3:checked + svg.checkbox .outer-ring {
+    -webkit-animation: animateRing .35s ease-in-out forwards;
+    animation: animateRing .35s ease-in-out forwards;
 }
 
-input[type="checkbox"].switch_3:checked + svg.checkbox .is_checked{
-  opacity: 1;
-  -webkit-transform: translateX(0) rotate(0deg);
-          transform: translateX(0) rotate(0deg);
+input[type="checkbox"].switch_3:checked + svg.checkbox .is_checked {
+    opacity: 1;
+    -webkit-transform: translateX(0) rotate(0deg);
+    transform: translateX(0) rotate(0deg);
 }
 
-input[type="checkbox"].switch_3:checked + svg.checkbox .is_unchecked{
-  opacity: 0;
-  -webkit-transform: translateX(-200%) rotate(180deg);
-          transform: translateX(-200%) rotate(180deg);
+input[type="checkbox"].switch_3:checked + svg.checkbox .is_unchecked {
+    opacity: 0;
+    -webkit-transform: translateX(-200%) rotate(180deg);
+    transform: translateX(-200%) rotate(180deg);
 }
 
-
-svg.checkbox{
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+svg.checkbox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-svg.checkbox .is_checked{
-  opacity: 0;
-  fill: #FFD700;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-transform: translateX(200%) rotate(45deg);
-          transform: translateX(200%) rotate(45deg);
-  -webkit-transition: all .35s;
-  transition: all .35s;
+svg.checkbox .is_checked {
+    opacity: 0;
+    fill: #FFD700;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transform: translateX(200%) rotate(45deg);
+    transform: translateX(200%) rotate(45deg);
+    -webkit-transition: all .35s;
+    transition: all .35s;
 }
 
-svg.checkbox .is_unchecked{
-  opacity: 1;
-  fill: #fff;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-transform: translateX(0) rotate(0deg);
-          transform: translateX(0) rotate(0deg);
-  -webkit-transition: all .35s;
-  transition: all .35s;
+svg.checkbox .is_unchecked {
+    opacity: 1;
+    fill: #ffffff;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transform: translateX(0) rotate(0deg);
+    transform: translateX(0) rotate(0deg);
+    -webkit-transition: all .35s;
+    transition: all .35s;
 }
 
-@-webkit-keyframes animateRing{
-  to{
-    stroke-dashoffset: 0;
-    stroke: var(--theme-color);
-  }
+@-webkit-keyframes animateRing {
+    to {
+        stroke-dashoffset: 0;
+        stroke: #ffffff;
+        /*var(--theme-color);*/
+    }
 }
 
-@keyframes animateRing{
-  to{
-    stroke-dashoffset: 0;
-    stroke: var(--theme-color);;
-  }
+@keyframes animateRing {
+    to {
+        stroke-dashoffset: 0;
+        stroke: #ffffff;
+        /*var(--theme-color);*/
+    }
 }
 
-@-webkit-keyframes resetRing{
-  to{
-    stroke-dashoffset: 0;
-    stroke: var(--theme-color-second);
-  }
+@-webkit-keyframes resetRing {
+    to {
+        stroke-dashoffset: 0;
+        stroke: #ffffff;
+        /*var(--theme-color);*/
+    }
 }
 
-@keyframes resetRing{
-  to{
-    stroke-dashoffset: 0;
-    stroke: var(--theme-color-second);
-  }
+@keyframes resetRing {
+    to {
+        stroke-dashoffset: 0;
+        stroke: #ffffff;
+        /*var(--theme-color);*/
+    }
 }
 
 /* Switch 3 Specific Style End */
+.sidenav ul {
+    padding-inline-start: 20px; font-size: 0.5em;
+}
 
 
-.sidenav li:focus-visible {}
+.card {
+    color: var(--theme-invert-color)
+}

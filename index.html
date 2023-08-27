@@ -11,6 +11,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="language" content="Gujarati">
         <meta name="author" content="Bhavesh Prajapati">
+        <meta property="og:title" content="શ્રી ગીતાજી"/>
+        <meta property="og:description" content="તમારે જે કરવાનું છે તે કરો, પણ લોભથી નહીં, અહંકારથી નહીં, વાસનાથી નહીં, ઈર્ષ્યાથી નહીં, પણ પ્રેમ, કરુણા, નમ્રતા અને ભક્તિથી કરો. - ભગવાન કૃષ્ણ, ભગવદ ગીતા."/>
+        <meta property="og:url" content="https://bhaveshpp.github.io/gitaji"/>
+        <meta property="og:image" content="logo.png"/>
         <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -20,9 +24,6 @@
         <link rel="manifest" href="manifest.json">
         <title>શ્રી ગીતાજી</title>
         <script>
-            var css = document.querySelector(':root');
-        </script>
-        <script>
             if ('serviceWorker'in navigator) {
                 navigator.serviceWorker.register('sw.js').then(function(registration) {
                     console.log('Service Worker registered with scope:', registration.scope);
@@ -31,14 +32,16 @@
                 });
             }
         </script>
+        <script>
+            var css = document.querySelector(':root');
+        </script>
+        <script src="theme.js"></script>
     </head>
     <body>
-        <div id="mySidenav" class="sidenav">
+        <div id="side-nav" class="sidenav">
             <img class="logo" src="./logo.png"/>
             <ul>
-                <li>
-                    <a href="#">Continue</a>
-                </li>
+                <li onclick="continueRead()">Continue</li>
                 <li onclick="shareApp()">Share</li>
                 <li>
                     <span>Font</span>
@@ -52,7 +55,7 @@
                     <span>Theme</span>
                     <div class="switch_box box_3">
                         <div class="toggle_switch">
-                            <input type="checkbox" class="switch_3" checked="checked" onchange="changeTheme(this)">
+                            <input type="checkbox" id="theme_switch" class="switch_3" checked="checked" onchange="changeTheme(this)">
                             <svg class="checkbox" xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" viewBox="0 0 168 80">
                                 <path class="outer-ring" d="M41.534 9h88.932c17.51 0 31.724 13.658 31.724 30.482 0 16.823-14.215 30.48-31.724 30.48H41.534c-17.51 0-31.724-13.657-31.724-30.48C9.81 22.658 24.025 9 41.534 9z" fill="none" stroke="#233043" stroke-width="3" stroke-linecap="square" stroke-miterlimit="3"/>
                                 <path class="is_checked" d="M17 39.482c0-12.694 10.306-23 23-23s23 10.306 23 23-10.306 23-23 23-23-10.306-23-23z"/>
@@ -82,135 +85,148 @@
         </header>
         <section class="main-content">
             <div class="card">
+                <div class="adhyay-number">૧.</div>
                 <div class="adhayay-title">
                     <a href="adhayay.html">
-                        <h2>૧. અર્જુનવિષાદ યોગ (કર્મયોગમાં).</h2>
+                        <h2>અર્જુનવિષાદ યોગ (કર્મયોગમાં).</h2>
                     </a>
                 </div>
             </div>
             <div class="card">
+                <div class="adhyay-number">૨.</div>
                 <div class="adhayay-title">
                     <a href="adhayay.html">
-                        <h2>૨. સાંખ્ય યોગ (કર્મયોગમાં).</h2>
+                        <h2>સાંખ્ય યોગ (કર્મયોગમાં).</h2>
                     </a>
                 </div>
             </div>
             <div class="card">
+                <div class="adhyay-number">૩.</div>
                 <div class="adhayay-title">
                     <a href="adhayay.html">
-                        <h2>૩. કર્મ યોગ (કર્મયોગમાં).</h2>
+                        <h2>કર્મ યોગ (કર્મયોગમાં).</h2>
                     </a>
                 </div>
             </div>
             <div class="card">
+                <div class="adhyay-number">૪.</div>
                 <div class="adhayay-title">
                     <a href="adhayay.html">
-                        <h2>૪. જ્ઞાનકર્મસંન્યાસ યોગ (કર્મયોગમાં).</h2>
+                        <h2>જ્ઞાનકર્મસંન્યાસ યોગ (કર્મયોગમાં).</h2>
                     </a>
                 </div>
             </div>
             <div class="card">
+                <div class="adhyay-number">૫.</div>
                 <div class="adhayay-title">
                     <a href="adhayay.html">
-                        <h2>૫. કર્મસંન્યાસ યોગ (કર્મયોગમાં).</h2>
+                        <h2>કર્મસંન્યાસ યોગ (કર્મયોગમાં).</h2>
                     </a>
                 </div>
             </div>
             <div class="card">
+                <div class="adhyay-number">૬.</div>
                 <div class="adhayay-title">
                     <a href="adhayay.html">
-                        <h2>૬. આત્મસંયમ યોગ (કર્મયોગમાં).</h2>
+                        <h2>આત્મસંયમ યોગ (કર્મયોગમાં).</h2>
                     </a>
                 </div>
             </div>
             <div class="card">
+                <div class="adhyay-number">૭.</div>
                 <div class="adhayay-title">
                     <a href="adhayay.html">
-                        <h2>૭. જ્ઞાનવિજ્ઞાન યોગ (ભક્તિયોગમાં).</h2>
+                        <h2>જ્ઞાનવિજ્ઞાન યોગ (ભક્તિયોગમાં).</h2>
                     </a>
                 </div>
             </div>
             <div class="card">
+                <div class="adhyay-number">૮.</div>
                 <div class="adhayay-title">
                     <a href="adhayay.html">
-                        <h2>૮. અક્ષરબ્રહ્મ યોગ (ભક્તિયોગમાં).</h2>
+                        <h2>અક્ષરબ્રહ્મ યોગ (ભક્તિયોગમાં).</h2>
                     </a>
                 </div>
             </div>
             <div class="card">
+                <div class="adhyay-number">૯.</div>
                 <div class="adhayay-title">
                     <a href="adhayay.html">
-                        <h2>૯. રાજવિધ્યારાજગુહ્ય યોગ (ભક્તિયોગમાં).</h2>
+                        <h2>રાજવિધ્યારાજગુહ્ય યોગ (ભક્તિયોગમાં).</h2>
                     </a>
                 </div>
             </div>
             <div class="card">
+                <div class="adhyay-number">૧૦.</div>
                 <div class="adhayay-title">
                     <a href="adhayay.html">
-                        <h2>૧૦. વિભૂતિ યોગ (ભક્તિયોગમાં).</h2>
+                        <h2>વિભૂતિ યોગ (ભક્તિયોગમાં).</h2>
                     </a>
                 </div>
             </div>
             <div class="card">
+                <div class="adhyay-number">૧૧.</div>
                 <div class="adhayay-title">
                     <a href="adhayay.html">
-                        <h2>૧૧. વિશ્વરૂપદર્શન યોગ (ભક્તિયોગમાં).</h2>
+                        <h2>વિશ્વરૂપદર્શન યોગ (ભક્તિયોગમાં).</h2>
                     </a>
                 </div>
             </div>
             <div class="card">
+                <div class="adhyay-number">૧૨.</div>
                 <div class="adhayay-title">
                     <a href="adhayay.html">
-                        <h2>૧૨. ભક્તિ યોગ (ભક્તિયોગમાં).</h2>
+                        <h2>ભક્તિ યોગ (ભક્તિયોગમાં).</h2>
                     </a>
                 </div>
             </div>
             <div class="card">
+                <div class="adhyay-number">૧૩.</div>
                 <div class="adhayay-title">
                     <a href="adhayay.html">
-                        <h2>૧૩. ક્ષેત્રક્ષેત્રજ્ઞ યોગ (જ્ઞાનયોગમાં).</h2>
+                        <h2>ક્ષેત્રક્ષેત્રજ્ઞ યોગ (જ્ઞાનયોગમાં).</h2>
                     </a>
                 </div>
             </div>
             <div class="card">
+                <div class="adhyay-number">૧૪.</div>
                 <div class="adhayay-title">
                     <a href="adhayay.html">
-                        <h2>૧૪. ગુણત્રયવિભાગ યોગ (જ્ઞાનયોગમાં).</h2>
+                        <h2>ગુણત્રયવિભાગ યોગ (જ્ઞાનયોગમાં).</h2>
                     </a>
                 </div>
             </div>
             <div class="card">
+                <div class="adhyay-number">૧૫.</div>
                 <div class="adhayay-title">
                     <a href="adhayay.html">
-                        <h2>૧૫. પુરુષોત્તમ યોગ (જ્ઞાનયોગમાં).</h2>
+                        <h2>પુરુષોત્તમ યોગ (જ્ઞાનયોગમાં).</h2>
                     </a>
                 </div>
             </div>
             <div class="card">
+                <div class="adhyay-number">૧૬.</div>
                 <div class="adhayay-title">
                     <a href="adhayay.html">
-                        <h2>૧૬. દેવાસુરસંપદ્વિભાગ યોગ (જ્ઞાનયોગમાં).</h2>
+                        <h2>દેવાસુરસંપદ્વિભાગ યોગ (જ્ઞાનયોગમાં).</h2>
                     </a>
                 </div>
             </div>
             <div class="card">
+                <div class="adhyay-number">૧૭.</div>
                 <div class="adhayay-title">
                     <a href="adhayay.html">
-                        <h2>૧૭. શ્રદ્ધાત્રયવિભાગ યોગ (જ્ઞાનયોગમાં).</h2>
+                        <h2>શ્રદ્ધાત્રયવિભાગ યોગ (જ્ઞાનયોગમાં).</h2>
                     </a>
                 </div>
             </div>
             <div class="card">
+                <div class="adhyay-number">૧૮.</div>
                 <div class="adhayay-title">
                     <a href="adhayay.html">
-                        <h2>૧૮. મોક્ષસંન્યાસ યોગ (જ્ઞાનયોગમાં).</h2>
+                        <h2>મોક્ષસંન્યાસ યોગ (જ્ઞાનયોગમાં).</h2>
                     </a>
                 </div>
-            </div>
-        </section>
-        <section class="footer">
-            <div>
-                <a href="https://bhaveshpp.github.io/">©bhaveshpp</a>
             </div>
         </section>
     </body>

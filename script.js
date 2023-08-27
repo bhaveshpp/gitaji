@@ -1,5 +1,4 @@
-var css = document.querySelector(':root');
-
+var cache = {};
 let deferredPrompt;
 
 window.addEventListener('beforeinstallprompt', event=>{
@@ -67,7 +66,7 @@ function canOverlay(flag=true) {
     }
 
 }
-var sidebar = document.getElementById("mySidenav");
+var sidebar = document.getElementById("side-nav");
 function openNav() {
     sidebar.style.width = "250px";
     canOverlay(true);
@@ -75,7 +74,7 @@ function openNav() {
 
 function closeNav() {
     if (sidebar.style.width != 0) {
-        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("side-nav").style.width = "0";
         canOverlay(false);
     }
 }
@@ -98,27 +97,19 @@ function setFont(size) {
 
 function changeTheme(element) {
     if(element.checked) {
-        sunRiseTheme();
+        applyTheme('sun');
     }
     else 
     {
-        sunsetTheme();
+        applyTheme('moon');
     }
 }
 
-function sunRiseTheme() {
-    css.style.setProperty('--theme-color', '#fff');
-    css.style.setProperty('--theme-color-second', '#303841');
-    css.style.setProperty('--theme-invert-color', '#000');
-    css.style.setProperty('--theme-menu-color', '#ab8446');
-    css.style.setProperty('--theme-bg-color', '#c39b6b');
-    css.style.setProperty('--theme-overlay-bg', 'rgba(0,0,0,0.5)');
-}
-function sunsetTheme() {
-    css.style.setProperty('--theme-color', '#303841');
-    css.style.setProperty('--theme-color-second', '#fff');
-    css.style.setProperty('--theme-bg-color', '#000');
-    css.style.setProperty('--theme-invert-color', '#c39b6b');
-    css.style.setProperty('--theme-menu-color', '#ab8446');
-    css.style.setProperty('--theme-overlay-bg', 'rgba(1,1,1,0.5)');
-}
+addEventListener('load',() => {
+    var themeSwitch = document.getElementById("theme_switch");
+    if (localStorage.getItem("theme") == "sun") {
+        themeSwitch.checked = true;
+    } else {
+        themeSwitch.checked = false;
+    }
+});
