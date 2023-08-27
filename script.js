@@ -28,6 +28,7 @@ function showAddToHomeScreenPopup() {
 }
 
 function addToHomeScreen() {
+    canOverlay(true);
     // Show the browser's install prompt
     deferredPrompt.prompt();
 
@@ -57,6 +58,7 @@ function cancelAddToHomeScreen() {
 function hideAddToHomeScreenPopup() {
     const popup = document.getElementById('add-to-home-screen-popup');
     popup.style.display = 'none';
+    canOverlay(false);
 }
 function canOverlay(flag=true) {
     if (flag) {
