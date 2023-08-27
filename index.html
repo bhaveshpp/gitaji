@@ -46,9 +46,12 @@
                 <li>
                     <span>Font</span>
                     <ul class="fonts">
-                        <li>
+                        <!--li>
                             <input type="range" min="0.4" max="1" step='0.1' name="txt" value="Hello" onchange="setFont(this.value)">
-                        </li>
+                    </li-->
+                        <li onclick="setFont(0.4)">Small</li>
+                        <li onclick="setFont(0.6)">Medium</li>
+                        <li onclick="setFont(0.8)">Big</li>
                     </ul>
                 </li>
                 <li>
@@ -65,7 +68,7 @@
                     </div>
                 </li>
             </ul>
-            <a href="https://bhaveshpp.github.io/" class="copyright">@bhaveshpp</a>
+            <a href="https://bhaveshpp.github.io/" class="copyright" target="_blank">@bhaveshpp</a>
         </div>
         <div id="overlay" onclick="closeNav()"></div>
         <div id="add-to-home-screen-popup">

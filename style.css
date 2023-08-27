@@ -186,8 +186,13 @@ section.footer {
     padding: 10px;
     border-radius: var(--theme-border-radius);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: max-content;
+    text-align: center;
+    font-size: 1.5rem;
 }
-
+#add-to-home-screen-popup button{
+    font-size: 1.5rem;
+}
 #add-button {
     background-color: #4caf50;
     color: #ffffff;

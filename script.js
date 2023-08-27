@@ -92,10 +92,6 @@ function shareApp() {
     }
 }
 
-function setFont(size) {
-    css.style.fontSize = size + 'rem';
-}
-
 function changeTheme(element) {
     if(element.checked) {
         applyTheme('sun');
