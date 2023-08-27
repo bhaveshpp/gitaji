@@ -19,7 +19,7 @@ function showAddToHomeScreenPopup() {
 
     const popup = document.getElementById('add-to-home-screen-popup');
     popup.style.display = 'block';
-
+    canOverlay(true);
     const addButton = document.getElementById('add-button');
     addButton.addEventListener('click', addToHomeScreen);
 
@@ -28,7 +28,6 @@ function showAddToHomeScreenPopup() {
 }
 
 function addToHomeScreen() {
-    canOverlay(true);
     // Show the browser's install prompt
     deferredPrompt.prompt();
 
