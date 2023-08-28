@@ -26,7 +26,7 @@ if (localStorage.getItem("font-size")) {
 function continueRead(adhyay = null) {
     if (adhyay) {
         localStorage.setItem("adhayay", adhyay);
-        window.location.href = "adhayay.html" + adhyay;
+        window.location.href = "adhayay.html#" + adhyay;
     } else {
         if (localStorage.getItem("adhayay")) {
             continueRead(localStorage.getItem("adhayay"));
