@@ -35,3 +35,22 @@ function continueRead(adhyay = null) {
         }
     }
 }
+
+addEventListener('load', ()=>{    
+    let adhyay = document.getElementById(location.hash.replace('#',''));
+    if (adhyay) {
+         adhyay.style.display='block';   
+    }
+}
+);
+var audioElement = document.createElement('audio');
+var paycount = 0;
+window.onload=function(){
+    audioElement.setAttribute('src', 'audio.mp3');
+}
+css.addEventListener("click", function () {
+    if (paycount == 0) {
+        audioElement.play(); 
+        paycount++;
+    }
+})

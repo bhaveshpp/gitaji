@@ -368,3 +368,7 @@ svg.checkbox .is_unchecked {
 .sidenav ul {
     padding-inline-start: 20px; font-size: 0.5em;
 }
+
+.adhayay-page .main-content {
+    display:none;
+}
