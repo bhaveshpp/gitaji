@@ -93,20 +93,18 @@ function shareApp() {
 }
 
 function changeTheme(element) {
-    if(element.checked) {
+    if (element.checked) {
         applyTheme('sun');
-    }
-    else 
-    {
+    } else {
         applyTheme('moon');
     }
 }
-
-addEventListener('load',() => {
+addEventListener('load', ()=>{
     var themeSwitch = document.getElementById("theme_switch");
     if (localStorage.getItem("theme") == "sun") {
         themeSwitch.checked = true;
     } else {
         themeSwitch.checked = false;
     }
-});
+}
+);

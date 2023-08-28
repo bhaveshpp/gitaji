@@ -69,7 +69,6 @@ a.btn {
 
 section.main-content {
     background-color: var(--theme-walpaper-color);
-    border-radius: var(--theme-border-radius);
     padding: 10px;
     margin: 5px;
     border-radius: 0 10px 10px 0;
@@ -79,29 +78,28 @@ section.main-content {
 .card {
     display: flex;
     background-color: transparent;
-    /* border-radius: var(--theme-border-radius); */
     margin: 1px;
     padding: 2% 7%;
-    /* text-align: center; */
     -webkit-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5);
-    /* box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5); */
-    /* background: rgba( 255, 255, 255, 0.7 ); */
     box-shadow: 0 8px 32px 0 rgba( 0,0,0, 0.1);
-    /* backdrop-filter: blur( 6px ); */
     -webkit-backdrop-filter: blur( 6px );
-    /* border-radius: var(--theme-border-radius); */
-    /* margin: 10px; */
-    /* text-align: center; */
-    /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
     flex-direction: row;
     align-items: baseline;
     gap: 1em;
+    color: var(--theme-invert-color)
 }
+
+.card.adhayay{
+    display: grid;
+    text-align: center;
+}
+
 .adhyay-number {
     font-size: 1.5rem;
     font-weight: 600;
 }
+
 .nev {
     text-align: center;
     padding: 5px;
@@ -163,6 +161,10 @@ section.footer {
     cursor: pointer;
 }
 
+.sidenav li:focus {
+    background-color: var(--theme-menu-color);
+}
+
 .sidenav a:hover {
     color: var(--theme-color-second);
 }
@@ -190,9 +192,11 @@ section.footer {
     text-align: center;
     font-size: 1.8rem;
 }
-#add-to-home-screen-popup button{
+
+#add-to-home-screen-popup button {
     font-size: 1.8rem;
 }
+
 #add-button {
     background-color: #4caf50;
     color: #ffffff;
@@ -226,7 +230,7 @@ img.logo {
 
 .back {
     font-size: 1.5rem;
-    color: var(--theme-color-second);
+    color: var(--theme-primary-color);
     margin: 1em;
 }
 
@@ -363,9 +367,4 @@ svg.checkbox .is_unchecked {
 /* Switch 3 Specific Style End */
 .sidenav ul {
     padding-inline-start: 20px; font-size: 0.5em;
-}
-
-
-.card {
-    color: var(--theme-invert-color)
 }

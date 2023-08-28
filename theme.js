@@ -7,17 +7,31 @@ function applyTheme(theme='sun') {
     css.style.setProperty('--theme-walpaper-color', ' var(--' + theme + '-theme-walpaper-color');
     localStorage.setItem("theme", theme);
 }
-function setFont(size) {
-    css.style.fontSize = size + 'rem';
-    localStorage.setItem("font-size", size);
-}
+
 if (localStorage.getItem("theme")) {
     applyTheme(localStorage.getItem("theme"));
 } else {
     applyTheme("moon");
 }
+function setFont(size) {
+    css.style.fontSize = size + 'rem';
+    localStorage.setItem("font-size", size);
+}
 if (localStorage.getItem("font-size")) {
     setFont(localStorage.getItem("font-size"));
 } else {
     setFont("0.6");
+}
+
+function continueRead(adhyay = null) {
+    if (adhyay) {
+        localStorage.setItem("adhayay", adhyay);
+        window.location.href = "adhayay.html" + adhyay;
+    } else {
+        if (localStorage.getItem("adhayay")) {
+            continueRead(localStorage.getItem("adhayay"));
+        } else {
+            continueRead('#adhayay1');
+        }
+    }
 }
