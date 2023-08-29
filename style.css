@@ -87,7 +87,9 @@ section.main-content {
     flex-direction: row;
     align-items: baseline;
     gap: 1em;
-    color: var(--theme-invert-color)
+    color: var(--theme-invert-color);
+    border:.5px solid #ccc;
+    border-radius: var( --theme-border-radius);
 }
 
 .card.adhayay{
