@@ -75,7 +75,6 @@ a.btn {
 section.main-content {
     background-color: var(--theme-walpaper-color);
     padding: 10px;
-    margin: 5px;
     border-radius: 0 10px 10px 0;
     margin-left: 0;
 }
