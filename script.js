@@ -68,9 +68,14 @@ function canOverlay(flag=true) {
 
 }
 var sidebar = document.getElementById("side-nav");
+var paycount = 0;
 function openNav() {
     sidebar.style.width = "250px";
     canOverlay(true);
+    if (paycount == 0) {
+        audioElement.play(); 
+        paycount++;
+    }
 }
 
 function closeNav() {

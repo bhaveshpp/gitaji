@@ -49,11 +49,12 @@ h1 {
 
 header {
     background-color: var(--theme-color);
-    border-radius: var(--theme-border-radius);
-    border-radius: 0 10px 10px 0;
     -webkit-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5);
     box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5);
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
 h2 {
@@ -161,7 +162,7 @@ section.footer {
 .sidenav li {
     padding: 8px 0;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 24px;
     display: block;
     transition: 0.3s;
     cursor: pointer;
@@ -231,7 +232,7 @@ section.footer {
 }
 
 img.logo {
-    margin-left: 3em;
+    margin-left: 40px;
 }
 
 .back {
@@ -373,8 +374,12 @@ svg.checkbox .is_unchecked {
 /* Switch 3 Specific Style End */
 .sidenav ul {
     padding-inline-start: 20px;
-    /* font-size: 0.5rem; */
     min-width: 200px;
+    margin: 15px auto;
+}
+
+.main-content .card:first-child {
+    margin-top: 5em;
 }
 
 .adhayay-page .main-content {
