@@ -36,6 +36,10 @@ body {
     user-select: none;
 }
 
+*{
+  -webkit-tap-highlight-color: transparent;  
+}
+
 h1 {
     margin: 10px;
     text-align: center;
