@@ -75,7 +75,6 @@ a.btn {
 section.main-content {
     background-color: var(--theme-walpaper-color);
     padding: 10px;
-    border-radius: 0 10px 10px 0;
     margin-left: 0;
 }
 
@@ -246,9 +245,6 @@ a {
 
 .fonts ul li {
     list-style: none;
-}
-
-ul.fonts li {
 }
 
 .sidenav .copyright {
