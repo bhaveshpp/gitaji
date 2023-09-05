@@ -31,11 +31,22 @@ self.addEventListener('fetch', function(event) {
 });
 
 const CACHE_NAME = 'gitaji';
-const urlsToCache = ['/', '/index.html', '/adhayay.html', '/style.css', '/script.js', '/favicon.ico', ];
+const urlsToCache = [
+    '/', 
+    '/index.html', 
+    '/adhayay.html', 
+    '/style.css', 
+    '/script.js', 
+    '/logo.png', 
+    '/audio.mp3', 
+    '/favicon.ico', 
+    '/knockout-3.5.1.js'
+];
 
-self.addEventListener('install', event=>{
-    event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(urlsToCache)));
-}
+self.addEventListener('install', 
+    event => {
+        event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(urlsToCache)));
+    }
 );
 
 self.addEventListener('fetch', event=>{
