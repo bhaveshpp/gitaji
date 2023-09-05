@@ -73,7 +73,7 @@ function openNav() {
     sidebar.style.width = "250px";
     canOverlay(true);
     if (paycount == 0) {
-        audioElement.play(); 
+        audioElement.play();
         paycount++;
     }
 }

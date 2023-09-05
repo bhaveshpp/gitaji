@@ -23,7 +23,7 @@ if (localStorage.getItem("font-size")) {
     setFont("0.6");
 }
 
-function continueRead(adhyay = null) {
+function continueRead(adhyay=null) {
     if (adhyay) {
         localStorage.setItem("adhayay", adhyay);
         window.location.href = "adhayay.html#" + adhyay;
@@ -36,14 +36,14 @@ function continueRead(adhyay = null) {
     }
 }
 
-addEventListener('load', ()=>{    
-    let adhyay = document.getElementById(location.hash.replace('#',''));
+addEventListener('load', ()=>{
+    let adhyay = document.getElementById(location.hash.replace('#', ''));
     if (adhyay) {
-         adhyay.style.display='block';   
+        adhyay.style.display = 'block';
     }
 }
 );
 var audioElement = document.createElement('audio');
-window.onload=function(){
+window.onload = function() {
     audioElement.setAttribute('src', 'audio.mp3');
 }
