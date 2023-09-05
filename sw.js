@@ -1,5 +1,16 @@
 const CACHE_NAME = 'gitaji';
-const urlsToCache = ['/', '/index.html', '/adhayay.html', '/style.css', '/script.js', '/logo.png', '/audio.mp3', '/favicon.ico', '/knockout-3.5.1.js'];
+const urlsToCache = [
+    '/', 
+    '/index.html', 
+    '/404.html', 
+    '/adhayay1.html', 
+    '/adhayay2.html', 
+    '/style.css', 
+    '/script.js', 
+    '/logo.png', 
+    '/audio.mp3', 
+    '/favicon.ico'
+];
 
 self.addEventListener('install', event=>{
     event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(urlsToCache)));

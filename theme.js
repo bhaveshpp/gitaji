@@ -26,23 +26,16 @@ if (localStorage.getItem("font-size")) {
 function continueRead(adhyay=null) {
     if (adhyay) {
         localStorage.setItem("adhayay", adhyay);
-        window.location.href = "adhayay.html#" + adhyay;
+        window.location.href = adhyay + ".html";
     } else {
         if (localStorage.getItem("adhayay")) {
             continueRead(localStorage.getItem("adhayay"));
         } else {
-            continueRead('#adhayay1');
+            continueRead('adhayay1');
         }
     }
 }
 
-addEventListener('load', ()=>{
-    let adhyay = document.getElementById(location.hash.replace('#', ''));
-    if (adhyay) {
-        adhyay.style.display = 'block';
-    }
-}
-);
 var audioElement = document.createElement('audio');
 window.onload = function() {
     audioElement.setAttribute('src', 'audio.mp3');

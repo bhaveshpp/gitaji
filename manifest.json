@@ -2,7 +2,7 @@
     "name": "શ્રી ગીતાજી",
     "short_name": "ગીતાજી",
     "description": "Guidance for life's journey",
-    "start_url": "/gitaji/index.html",
+    "start_url": "https://bhaveshpp.github.io/gitaji/index.html",
     "display": "standalone",
     "background_color": "#c39b6b",
     "theme_color": "#c39b6b",
