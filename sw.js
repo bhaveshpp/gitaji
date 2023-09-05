@@ -1,40 +1,8 @@
-// Service Worker installation
-self.addEventListener('install', function(event) {
-    event.waitUntil(caches.open('gitaji').then(function(cache) {
-        return cache.addAll(['/', '/index.html', '/adhayay.html', '/style.css', '/script.js', '/favicon.ico', ]);
-    }));
-});
-
-// Service Worker activation
-self.addEventListener('activate', function(event) {
-    event.waitUntil(caches.keys().then(function(cacheNames) {
-        return Promise.all(cacheNames.filter(function(cacheName) {
-            // Clean up any outdated caches
-            return cacheName !== 'gitaji';
-        }).map(function(cacheName) {
-            return caches.delete(cacheName);
-        }));
-    }));
-});
-
-// Intercept fetch requests
-self.addEventListener('fetch', function(event) {
-    event.respondWith(caches.match(event.request).then(function(response) {
-        // Serve the cached response if available
-        if (response) {
-            return response;
-        }
-
-        // If the request is not cached, fetch it from the network
-        return fetch(event.request);
-    }));
-});
-
 const CACHE_NAME = 'gitaji';
 const urlsToCache = [
     '/', 
     '/index.html', 
-    '/adhayay.html', 
+    // '/adhayay.html', 
     '/style.css', 
     '/script.js', 
     '/logo.png', 
