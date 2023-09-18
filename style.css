@@ -395,3 +395,7 @@ svg.checkbox .is_unchecked {
     margin-top: 5em;
 }
 
+.main-content .card:last-child {
+    margin-bottom: 5em;
+}
+
