@@ -56,6 +56,24 @@ header {
     width: 100%;
     top: 0;
 }
+footer {
+    background-color: var(--theme-color);
+    -webkit-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5);
+    box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer .nav {
+    display:flex;
+    justify-content:space-between;
+}
+
+footer .nav svg {
+    padding: 5px;
+}
 
 h2 {
     margin: 0;
