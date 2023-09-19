@@ -23,10 +23,11 @@ if (localStorage.getItem("font-size")) {
     setFont("0.6");
 }
 
-function continueRead(adhyay=null) {
-    if (adhyay) {
-        localStorage.setItem("adhayay", adhyay);
-        window.location.href = adhyay + ".html";
+function continueRead(path=null) {
+    if (path) {
+        localStorage.setItem("adhayay", path);
+        // window.location.href = path + ".html";
+        document.location.replace(path + ".html")
     } else {
         if (localStorage.getItem("adhayay")) {
             continueRead(localStorage.getItem("adhayay"));
