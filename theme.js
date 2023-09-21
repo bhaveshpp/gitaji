@@ -27,7 +27,7 @@ function continueRead(path=null) {
     if (path) {
         localStorage.setItem("adhayay", path);
         // window.location.href = path + ".html";
-        document.location.replace(path + ".html")
+        document.location.replace(path + ".html");
     } else {
         if (localStorage.getItem("adhayay")) {
             continueRead(localStorage.getItem("adhayay"));
@@ -41,3 +41,11 @@ var audioElement = document.createElement('audio');
 window.onload = function() {
     audioElement.setAttribute('src', 'audio.mp3');
 }
+
+window.addEventListener('load', function() {
+    window.history.pushState({}, '')
+})
+
+window.addEventListener('popstate', function() {
+    window.history.pushState({}, '')
+})
