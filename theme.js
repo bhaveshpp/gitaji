@@ -51,9 +51,23 @@ window.addEventListener('popstate', function() {
 })
 
 function whatsappShare(element) {
-    console.log(element);
+    let linebreak = '%0a';
+    var content = '';
+    element.querySelectorAll('.shlok .part').forEach(part => {
+        if (part != undefined) { 
+        content += encodeURIComponent(part.innerText);
+        content += linebreak;
+        }
+    });
+    content += linebreak;
+    element.querySelectorAll('.anuvad p').forEach(part => {
+        if (part != undefined) { 
+            content += encodeURIComponent(part.innerText);
+            content += linebreak;
+        }
+    });
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        var message = encodeURIComponent('જય શ્રી કૃષ્ણ | સીતારામ') + " - " + encodeURIComponent('https://bhaveshpp.github.io/gitaji');
+        var message = content + linebreak + linebreak + encodeURIComponent('https://bhaveshpp.github.io/gitaji');
         var whatsapp_url = "whatsapp://send?text=" + message;
         window.location.href = whatsapp_url;
     }
