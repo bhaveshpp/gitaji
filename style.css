@@ -424,3 +424,9 @@ svg.checkbox .is_unchecked {
 .main-content .card:last-child {
     margin-bottom: 5em;
 }
+
+@media screen and (min-width:1024px){
+    .action .icon.whatsapp {
+        display: none;
+    }
+}
