@@ -49,26 +49,38 @@ window.addEventListener('load', function() {
 window.addEventListener('popstate', function() {
     window.history.pushState({}, '')
 })
-
-function whatsappShare(element) {
-    let linebreak = '%0a';
+var linebreak = '%0a';
+function getContentTobeShare(element, urlEncoded = false) {
     var content = '';
     element.querySelectorAll('.shlok .part').forEach(part => {
         if (part != undefined) { 
-        content += encodeURIComponent(part.innerText);
+        content += urlEncoded?encodeURIComponent(part.innerText):part.innerText;
         content += linebreak;
         }
     });
     content += linebreak;
     element.querySelectorAll('.anuvad p').forEach(part => {
         if (part != undefined) { 
-            content += encodeURIComponent(part.innerText);
+            content += urlEncoded?encodeURIComponent(part.innerText):part.innerText;
             content += linebreak;
         }
     });
+    return content;
+}
+
+function whatsappShare(element) {
+    copyToClipboard(element);
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        var content = getContentTobeShare(element, true);
         var message = content + linebreak + linebreak + encodeURIComponent('https://bhaveshpp.github.io/gitaji');
         var whatsapp_url = "whatsapp://send?text=" + message;
         window.location.href = whatsapp_url;
+    }
+}
+
+function copyToClipboard(element) {
+    if (window.isSecureContext && navigator.clipboard) {
+        var content = getContentTobeShare(element);
+        navigator.clipboard.writeText(content);
     }
 }
