@@ -49,3 +49,12 @@ window.addEventListener('load', function() {
 window.addEventListener('popstate', function() {
     window.history.pushState({}, '')
 })
+
+function whatsappShare(element) {
+    console.log(element);
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        var message = encodeURIComponent('જય શ્રી કૃષ્ણ | સીતારામ') + " - " + encodeURIComponent('https://bhaveshpp.github.io/gitaji');
+        var whatsapp_url = "whatsapp://send?text=" + message;
+        window.location.href = whatsapp_url;
+    }
+}
