@@ -43,18 +43,19 @@
         <div id="side-nav" class="sidenav">
             <img class="logo" src="./logo.png"/>
             <ul>
-                <li onclick="continueRead()">Continue Read</li>
-                <li onclick="shareApp()">Share</li>
+                <li onclick="continueRead()">વાંચતાં રહો</li>
+                <li onclick="shareApp()">મોકલો</li>
+                <li onclick="continueRead('stuti', 0)">શ્રી સ્તુતિ</li>
                 <li>
-                    <span>Font</span>
+                    <span style="display: none;">Font</span>
                     <ul class="fonts">
-                        <li onclick="setFont(0.6)">Small</li>
-                        <li onclick="setFont(0.8)">Medium</li>
-                        <li onclick="setFont(1)">Big</li>
+                        <li onclick="setFont(0.6)">Aa</li>
+                        <li onclick="setFont(0.8)">Aa</li>
+                        <li onclick="setFont(1)">Aa</li>
                     </ul>
                 </li>
                 <li>
-                    <span>Theme</span>
+                    <span style="display: none;">Theme</span>
                     <div class="switch_box box_3">
                         <div class="toggle_switch">
                             <input type="checkbox" id="theme_switch" class="switch_3" checked="checked" onchange="changeTheme(this)">
@@ -71,9 +72,9 @@
         </div>
         <div id="overlay" onclick="closeNav()"></div>
         <div id="add-to-home-screen-popup">
-            <p>Do You want to install?</p>
-            <button id="add-button">yes</button>
-            <button id="cancel-button">no</button>
+            <p>તમારે ઇન્સ્ટોલ કરવું છે?</p>
+            <button id="add-button">હા</button>
+            <button id="cancel-button">ના</button>
         </div>
         <header>
             <div class="heading">

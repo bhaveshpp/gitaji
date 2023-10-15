@@ -417,6 +417,15 @@ svg.checkbox .is_unchecked {
     margin: 15px auto;
 }
 
+.sidenav ul.fonts{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 .main-content .card:first-child {
     margin-top: 5em;
 }

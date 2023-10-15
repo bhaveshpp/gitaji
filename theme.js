@@ -23,9 +23,11 @@ if (localStorage.getItem("font-size")) {
     setFont("0.6");
 }
 
-function continueRead(path=null) {
+function continueRead(path=null,save=1) {
     if (path) {
-        localStorage.setItem("adhayay", path);
+        if(save) {
+            localStorage.setItem("adhayay", path);
+        }
         // window.location.href = path + ".html";
         document.location.replace(path + ".html");
     } else {
