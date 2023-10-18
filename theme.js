@@ -86,3 +86,10 @@ function copyToClipboard(element) {
         navigator.clipboard.writeText(content);
     }
 }
+function changeTheme(element) {
+    if (element.checked) {
+        applyTheme('sun');
+    } else {
+        applyTheme('moon');
+    }
+}
