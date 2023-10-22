@@ -90,7 +90,7 @@ function shareApp() {
         navigator.share({
             title: 'શ્રી ગીતાજી',
             text: 'Guidance for life journey!',
-            url: 'https://bhaveshpp.github.io/gitaji/',
+            url: window.location.href,
         }).then(()=>console.log('Successful share')).catch((error)=>console.log('Error sharing', error));
     } else {
         console.log('Share not supported on this browser, do it the old way.');
