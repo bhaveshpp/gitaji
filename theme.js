@@ -80,6 +80,10 @@ function whatsappShare(element) {
     }
 }
 
+function reportIssue() {
+    window.location.href = "https://github.com/bhaveshpp/gitaji/issues/new?title=%E0%AA%B9%E0%AA%B0%E0%AB%87%20%E0%AA%95%E0%AB%83%E0%AA%B7%E0%AB%8D%E0%AA%A3!";
+}
+
 function copyToClipboard(element) {
     if (window.isSecureContext && navigator.clipboard) {
         var content = getContentTobeShare(element);
