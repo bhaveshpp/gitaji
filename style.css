@@ -31,7 +31,6 @@ html {
 
 body {
     margin: 0;
-    background-color: antiquewhite;
     font-size: 1.1rem;
     user-select: none;
 }
@@ -45,6 +44,7 @@ h1 {
     text-align: center;
     width: 100%;
     color: var(--theme-primary-color);
+    font-size: 2em;
 }
 
 header {
@@ -55,6 +55,8 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
+    min-height: 5em;
+    max-height: 5em;
 }
 footer {
     background-color: var(--theme-color);
@@ -92,9 +94,10 @@ a.btn {
 
 section.main-content {
     background-color: var(--theme-walpaper-color);
-    padding: 15px;
+    padding: 5px;
     margin-left: 0;
     min-width: 85%;
+    margin-top: 5em;
 }
 
 .card {
@@ -102,7 +105,7 @@ section.main-content {
     display: flex;
     background-color: transparent;
     margin: 3px;
-    padding: 2% 7%;
+    padding: 1%;
     -webkit-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5);
     box-shadow: 0 8px 32px 0 rgba( 0,0,0, 0.1);
@@ -120,8 +123,9 @@ section.main-content {
     text-align: center;
 }
 
-.anuvad {
+.shlok {
     border-bottom: 1px solid #ccc;
+    padding: 0.5rem;
 }
 
 .anuvad:last-child{
@@ -129,7 +133,7 @@ section.main-content {
 }
 
 .action {
-    display: flex;
+    display: none;/*flex;*/
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 5px;
@@ -157,6 +161,7 @@ section.main-content {
 .adhyay-number {
     font-size: 1.5rem;
     font-weight: 600;
+    margin-left: 1rem;
 }
 
 .nev {
@@ -434,9 +439,9 @@ svg.checkbox .is_unchecked {
     justify-content: space-evenly;
 }
 
-.main-content .card:first-child {
+/* .main-content .card:first-child {
     margin-top: 5em;
-}
+} */
 
 .main-content .card:last-child {
     margin-bottom: 5em;

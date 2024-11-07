@@ -7,11 +7,18 @@ function applyTheme(theme='sun') {
     css.style.setProperty('--theme-walpaper-color', ' var(--' + theme + '-theme-walpaper-color');
     localStorage.setItem("theme", theme);
 }
-
-if (localStorage.getItem("theme")) {
-    applyTheme(localStorage.getItem("theme"));
+if (localStorage.getItem("theme") && localStorage.getItem("theme") != "system") {
+        applyTheme(localStorage.getItem("theme"));
 } else {
-    applyTheme("moon");
+    applySystemTheme();
+}
+function applySystemTheme() {
+    let systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+    if (systemTheme.matches) {
+        applyTheme("moon");
+    } else {
+        applyTheme("sun");
+    }
 }
 function setFont(size) {
     css.style.fontSize = size + 'rem';
