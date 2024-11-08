@@ -30,6 +30,13 @@ if (localStorage.getItem("font-size")) {
     setFont("0.6");
 }
 
+function setFontRangeValue() {
+    let rangeElement = document.getElementById('font-range');
+    if (rangeElement){
+        rangeElement.value = localStorage.getItem("font-size");
+    }
+}
+
 function continueRead(path=null,save=1) {
     if (path) {
         if(save) {
@@ -49,6 +56,7 @@ function continueRead(path=null,save=1) {
 var audioElement = document.createElement('audio');
 window.onload = function() {
     audioElement.setAttribute('src', 'audio.mp3');
+    setFontRangeValue();
 }
 
 window.addEventListener('load', function() {

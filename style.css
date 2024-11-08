@@ -8,14 +8,14 @@
     --sun-theme-invert-color: #303841;
     --sun-theme-menu-color: #ffe6d1;
     --sun-theme-menu-font-color: #c39b6b;
-    --sun-theme-walpaper-color: rgba(255, 255, 255, 0.5);
+    --sun-theme-walpaper-color: rgba(255, 255, 255, 0.9);
     /* Moon Theme color */
-    --moon-theme-color: #303841;
+    --moon-theme-color: #000000;
     --moon-theme-primary-color: #c39b6b;
     --moon-theme-invert-color: #fff;
     --moon-theme-menu-color: #303841;
     --moon-theme-menu-font-color: #303841;
-    --moon-theme-walpaper-color: rgba(0, 0, 0, 0.5);
+    --moon-theme-walpaper-color: rgba(0, 0, 0, 0.9);
     /* Default Theme color */
     --theme-color: var(--sun-theme-color);
     --theme-primary-color: var(--sun-theme-primary-color);
@@ -33,6 +33,7 @@ body {
     margin: 0;
     font-size: 1.1rem;
     user-select: none;
+    background-color: var(--theme-walpaper-color);
 }
 
 * {
